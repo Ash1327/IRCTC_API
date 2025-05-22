@@ -127,3 +127,160 @@ Logs in a registered user and returns a JWT token.
 }
 ```
 copy the Token
+
+
+### 📌 Add a New Train
+
+**Endpoint:** `POST /admin/addTrain`  
+Allows an admin to add a new train to the system.
+
+---
+
+**Request Headers:**
+x-api-key: your_admin_api_key
+
+
+
+**Request Body:**
+```json
+{
+  "trainNumber": "1001",
+  "source": "Panipat",
+  "destination": "Delhi",
+  "totalSeats": 200,
+  "availableSeats": 200
+}
+```
+Success Response:
+```json
+{
+  "message": "Trains added successfully",
+  "trainIds": [
+    {
+      "trainNumber": "1001",
+      "trainId": 1
+    }
+  ]
+}
+```
+
+
+
+
+#### 📌 Check Train Availability
+
+**Endpoint:** `GET /user/availability`  
+Checks for available trains between a source and destination.
+
+---
+
+**Query Parameters:**
+source=Panipat
+destination=Delhi
+
+
+**Example Request:**
+GET http://localhost:2127/user/availability?source=Panipat&destination=Delhi
+
+---
+
+**Success Response:**
+```json
+{
+  "available": true,
+  "availableTrainCount": 1,
+  "trains": [
+    {
+      "trainNumber": "1001",
+      "availableSeats": 200
+    }
+  ]
+}
+```
+
+#### 📌 Book Train Tickets
+
+**Endpoint:** `POST /user/booking`  
+Books a specified number of seats on a train for the logged-in user.
+
+---
+
+**Request Headers:**
+key:Authorization
+value : *(Use the token received from the login endpoint)*
+
+---
+
+**Request Body:**
+```json
+{
+  "trainId": 1,
+  "seatsToBook": 10
+}
+```
+Success Response:
+
+```json
+{
+  "message": "Seats booked successfully"
+}
+```
+
+
+#### 📌 Get User Booking Details
+
+**Endpoint:** `GET /user/bookingDetails`  
+Retrieves all booking records for the logged-in user.
+
+---
+
+**Success Response:**
+```json
+[
+  {
+    "booking_id": 1,
+    "number_of_seats": 10,
+    "train_number": "1001",
+    "source": "Panipat",
+    "destination": "Delhi"
+  }
+]
+```
+
+
+### 🔐 Update Train Seat Info
+
+**Endpoint:** `PUT /admin/update-seats/:trainId`  
+Updates the total and available seats for a specific train.
+
+---
+
+**Request Headers:**
+x-api-key: your_admin_api_key
+
+
+---
+
+**Request Parameters:**
+
+| Parameter | Type   | Description         |
+|-----------|--------|---------------------|
+| trainId   | Number | ID of the train to update |
+
+---
+
+**Request Body:**
+```json
+{
+  "totalSeats": 200,
+  "availableSeats": 150
+}
+```
+
+Success Response:
+
+```json
+{
+  "message": "Seats updated successfully"
+}
+```
