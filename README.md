@@ -110,3 +110,20 @@ now use the API : http://localhost:2127.
   "email": "abc@gmail.com",
   "password": "p1234"
 }
+```
+
+
+### 📌 Login User
+
+**Endpoint:** `POST /user/login`  
+Logs in a registered user and returns a JWT token.
+
+
+**Request Body:**
+```json
+{
+  "email": "abc@gmail.com",
+  "password": "p1234"
+}
+```
+copy the Token
