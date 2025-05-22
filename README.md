@@ -16,3 +16,22 @@ A simple railway booking system API inspired by IRCTC, built using **Node.js**, 
 
 ```bash
 npm install express dotenv mysql2 bcryptjs jsonwebtoken
+```
+
+
+
+
+Environment Variables
+Create a .env file in the root directory and configure:
+
+.env
+```bash
+PORT=2127
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=your_password
+DB_NAME=irctc
+JWT_SECRET=your_jwt_secret
+ADMIN_API_KEY=your_admin_api_key
+
+```
