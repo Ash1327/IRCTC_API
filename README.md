@@ -41,7 +41,7 @@ API_KEY=your_admin_api_key
 
 Clone the repository to your local machine:
 ```bash
-git clone https://github.com/ujjawalkumar131/IRCTC_API_WorkIndia.git
+git clone https://github.com/Ash1327/IRCTC_API.git
 ```
 Install all necessary dependencies using npm:
 ```bash
