@@ -29,9 +29,9 @@ Create a .env file in the root directory and configure:
 PORT=2127
 DB_HOST=localhost
 DB_USER=root
-DB_PASSWORD=your_password
+DB_PASSWORD=password
 DB_NAME=irctc
 JWT_SECRET=your_jwt_secret
-ADMIN_API_KEY=your_admin_api_key
+API_KEY=your_admin_api_key
 
 ```
