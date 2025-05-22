@@ -91,3 +91,22 @@ nodemon server.js
 ```
 
 now use the API : http://localhost:2127.
+
+
+
+
+
+## 📘 API Reference
+
+### User Routes
+
+#### 📌 Register a User
+**POST** `/user/register`
+
+**Body:**
+```json
+{
+  "name": "abc",
+  "email": "abc@gmail.com",
+  "password": "p1234"
+}
