@@ -1,5 +1,9 @@
 # IRCTC_API 🚆
 
+
+A simple railway booking system API inspired by IRCTC, built using **Node.js**, **Express**, and **MySQL**. It includes user registration/login, admin-protected train management, real-time seat availability, and booking with race condition handling.
+
+Workflow:
 ✅ Hour 1: Planning & Setup
 ##Carefully read and understood the problem statement.
 ##Decided to use:
@@ -39,42 +43,24 @@ Created:
 
 
 
-A simple railway booking system API inspired by IRCTC, built using **Node.js**, **Express**, and **MySQL**. It includes user registration/login, admin-protected train management, real-time seat availability, and booking with race condition handling.
-
----
-
 ✅ Functional Requirements
 User registration
-
 User login with JWT
-
 Role-based access control (user, admin)
-
 Add train (admin only)
-
 Search trains by source and destination
-
 View seat availability
-
 Book seat (with race condition handling)
-
 Get specific booking details
 
 ⚙️ Non-Functional Requirements
 Password encryption (bcrypt)
-
 JWT authentication
-
 API key protection for admin routes
-
 Transactional booking with row-level locking
-
 Fast API response times
-
 Modular code structure
-
 Scalable design
-
 Well-documented README
 
 ## 🔧 Project Setup
@@ -109,6 +95,7 @@ API_KEY=your_admin_api_key
 
 ```
 
+Sequential diagram:
 
 #Installation
 
