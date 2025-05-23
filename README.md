@@ -97,6 +97,16 @@ API_KEY=your_admin_api_key
 ```
 
 Sequential diagram:
+# IRCTC API
+
+## Database Design
+
+![ER Diagram](https://github.com/Ash1327/IRCTC_API/blob/main/ER_diagram.jpg)
+
+*Entity Relationship Diagram showing the database structure for the IRCTC booking system*
+
+
+ER Diagram:-
 
 ![ER Diagram](https://github.com/Ash1327/IRCTC_API/blob/main/ER_diagram.jpg)
 
