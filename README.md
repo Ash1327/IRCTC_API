@@ -126,8 +126,8 @@ Create a MySQL database named irctc.
 Run the SQL scripts in database/schema.sql to create necessary tables (users, trains, bookings).
 
 ```bash
-CREATE DATABASE irctc_db;
-USE irctc_db;
+CREATE DATABASE irctc;
+USE irctc;
 
 CREATE TABLE users (
    id INT AUTO_INCREMENT PRIMARY KEY,
