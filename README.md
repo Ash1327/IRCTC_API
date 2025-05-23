@@ -1,8 +1,81 @@
 # IRCTC_API 🚆
 
+✅ Hour 1: Planning & Setup
+##Carefully read and understood the problem statement.
+##Decided to use:
+##Node.js + Express (fast setup, async-friendly)
+
+MySQL (required)
+##Sketched the ER diagram (Users, Trains, Bookings).
+##Outlined key APIs and access control rules.
+##Initialized project structure (routes/, controllers/, models/).
+
+🔐 Hour 2: Authentication & Role Setup
+##Created register and login endpoints.
+##Implemented password hashing with bcrypt.
+##Added JWT token-based authentication.
+##Built middleware for API key verification for admin routes.
+
+🚆 Hour 3: Train Management (Admin)
+Created:
+##POST /trains – add a new train
+##PUT /trains/:id – update seat details
+##Protected these with the admin API key middleware.
+
+📦 Hour 4–5: Booking System with Race Condition Handling
+Created:
+##GET /trains?source=A&dest=B – search trains and availability
+##POST /bookings – book seats (JWT protected)
+##Used MySQL transactions + row-level locking to ensure safe concurrent booking.
+
+📋 Hour 6: Get Booking Details
+##Created GET /bookings/:id (JWT protected)
+##Ensured it returns only the logged-in user’s booking
+##Handled error cases (invalid train ID, no seats, etc.).
+
+🧪 Hour 7: Testing & Final Polish
+##Manual testing of all endpoints using Postman
+##Verified auth flow, booking concurrency, and admin access.
+
+
+
 A simple railway booking system API inspired by IRCTC, built using **Node.js**, **Express**, and **MySQL**. It includes user registration/login, admin-protected train management, real-time seat availability, and booking with race condition handling.
 
 ---
+
+✅ Functional Requirements
+User registration
+
+User login with JWT
+
+Role-based access control (user, admin)
+
+Add train (admin only)
+
+Search trains by source and destination
+
+View seat availability
+
+Book seat (with race condition handling)
+
+Get specific booking details
+
+⚙️ Non-Functional Requirements
+Password encryption (bcrypt)
+
+JWT authentication
+
+API key protection for admin routes
+
+Transactional booking with row-level locking
+
+Fast API response times
+
+Modular code structure
+
+Scalable design
+
+Well-documented README
 
 ## 🔧 Project Setup
 
